@@ -7,7 +7,7 @@ function main(sectionList) {
     const range1 = _.range(elf1[0], elf1[1] + 1);
     const range2 = _.range(elf2[0], elf2[1] + 1);
     if (_.intersection(range1, range2).length > 0) {
-        res++;
+      res++;
     }
   }
   return res;
@@ -16,6 +16,8 @@ function main(sectionList) {
 const sectionList = fs
   .readFileSync('./input.txt', 'utf8')
   .split('\n')
-  .map((pairs) => pairs.split(',').map((section) => section.split('-').map(Number)));
+  .map((pairs) =>
+    pairs.split(',').map((section) => section.split('-').map(Number))
+  );
 
 console.log(main(sectionList));
